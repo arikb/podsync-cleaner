@@ -57,8 +57,7 @@ def feed_clean(file_name: str) -> None:
     )
 
     for file_name in files_to_delete:
-        print(file_name)
-        ## os.unlink(file_name)
+        os.unlink(file_name)
 
 
 @cli.command("clean")
