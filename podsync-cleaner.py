@@ -56,6 +56,9 @@ def feed_clean(file_name: str) -> None:
         f"Feed file {file_name} - deleting {len(files_to_delete)} out of {len(existing_file_names)} files"
     )
 
+    for file_name in files_to_delete:
+        os.unlink(file_name)
+
 
 @cli.command("clean")
 @click.argument(
